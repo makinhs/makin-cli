@@ -8,10 +8,10 @@ import prettierLintService from './services/prettier-lint.service';
 const program = new Command();
 
 (async () => {
-  console.info(chalk.red(figlet.textSync('makin-cli', { horizontalLayout: 'full' })));
+  console.info(chalk.green(figlet.textSync('makin-cli', { horizontalLayout: 'full' })));
 
   program
-    .version('0.0.7')
+    .version('0.0.8')
     .description('A CLI that scaffolds some quality gates in your app')
     .option('-p, --prettier', prettierLintService.getPrettierDescription())
     .option('-l, --lint', prettierLintService.getLintDescription())
@@ -22,7 +22,6 @@ const program = new Command();
   } else {
     console.info('Welcome back ;)');
     const options = program.opts();
-
     if (options.prettier) await prettierLintService.configPrettier();
     if (options.lint) await prettierLintService.configLint();
   }
