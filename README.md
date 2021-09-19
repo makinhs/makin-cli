@@ -38,7 +38,8 @@ So, in a project that doesn't have prettier you can run in the root of it:
 Expected result:
 
 ```
-   makin-cli -p
+➜  makin-cli -p
+
    [22:00:24] [info]                       _      _                          _   _ 
      _ __ ___     __ _  | | __ (_)  _ __             ___  | | (_)
     | '_ ` _ \   / _` | | |/ / | | | '_ \   _____   / __| | | | |
@@ -63,6 +64,7 @@ Expected result:
 
 ```
 ➜  makin-cli -l
+
 [22:03:12] [info]                       _      _                          _   _ 
   _ __ ___     __ _  | | __ (_)  _ __             ___  | | (_)
  | '_ ` _ \   / _` | | |/ / | | | '_ \   _____   / __| | | | |
