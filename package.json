@@ -1,0 +1,45 @@
+{
+  "name": "makin-cli",
+  "version": "0.0.6",
+  "description": "CLI to scaffold quality control such as prettier pre commit",
+  "main": "./lib/index.js",
+  "bin": {
+    "makin-cli": "./lib/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\"",
+    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "create": "npm run build",
+    "build": "tsc -p .",
+    "local": "sudo npm i -g && makin-cli",
+    "refresh": "rm -rf ./node_modules ./package-lock.json && npm install",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
+  },
+  "author": "Marcos Silva",
+  "license": "MIT",
+  "dependencies": {
+    "better-logging": "^4.5.0",
+    "chalk": "^4.1.2",
+    "child_process": "^1.0.2",
+    "commander": "^8.2.0",
+    "figlet": "^1.5.2",
+    "npm": "^7.24.0",
+    "npm-add-script": "^1.1.0",
+    "path": "^0.12.7",
+    "util": "^0.12.4"
+  },
+  "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/clear": "^0.1.2",
+    "@types/figlet": "^1.5.4",
+    "@types/node": "^16.9.3",
+    "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "@typescript-eslint/parser": "^4.31.1",
+    "eslint": "^7.32.0",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.4.1",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
+  }
+}
