@@ -8,7 +8,6 @@ import * as child_process from 'child_process';
 const exec = util.promisify(child_process.exec);
 
 class PrettierLintService {
-
   getPrettierDescription() {
     return 'add prettier to package.json, with a format script and a generic configuration file (.prettierrc)';
   }

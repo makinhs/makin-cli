@@ -1,6 +1,6 @@
 {
   "name": "makin-cli",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "CLI to scaffold quality control such as prettier pre commit",
   "main": "./lib/index.js",
   "bin": {
@@ -41,5 +41,12 @@
     "prettier": "^2.4.1",
     "ts-node": "^10.2.1",
     "typescript": "^4.4.3"
-  }
+  },
+  "keywords": [
+    "generator",
+    "prettier",
+    "eslint",
+    "lint",
+    "cli"
+  ]
 }

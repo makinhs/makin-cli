@@ -11,7 +11,7 @@ const program = new Command();
   console.info(chalk.green(figlet.textSync('makin-cli', { horizontalLayout: 'full' })));
 
   program
-    .version('0.0.8')
+    .version('0.0.9')
     .description('A CLI that scaffolds some quality gates in your app')
     .option('-p, --prettier', prettierLintService.getPrettierDescription())
     .option('-l, --lint', prettierLintService.getLintDescription())
