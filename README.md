@@ -30,9 +30,12 @@ Options:
   -l, --lint         add eslint to package.json, with a lint script and a generic configuration
                      file (.eslintrc.js)
                      
-  -ts, --typescript  add typescript related packages to package.json, and a generic configuration
+  -ts, --typescript  add Typescript related packages to package.json, and a generic configuration
                      file (.tsconfig.json), using src/index.ts as the main entrance of your app.
                      Change it in package.json after the build if yours is different
+                     
+  -cz, --commitizen  add commitzen and default configuration to support standard commit messages
+                     using npm run commit
                      
   -h, --help         display help for command
 
@@ -107,5 +110,26 @@ generated tsconfig.json and the added information on package.json
 [11:15:29] [info] Installing typescript @types/node ts-node
 [11:15:34] [info] Adding tsconfig.json
 [11:15:34] [info] Adding format script to package.json
+
+```
+
+### Adding commitizen
+
+[Commitizen](https://github.com/commitizen/cz-cli) facilitates your life to make standard commits. the `-cz` command will basically configure commitizen in your package.json and allow you to run it using `npm run commit` instead of using git commit, allowing you to choose their options and create commits with a nice standard.
+
+
+```
+➜  makin-cli -cz
+[21:15:58] [info]                       _      _                          _   _ 
+  _ __ ___     __ _  | | __ (_)  _ __             ___  | | (_)
+ | '_ ` _ \   / _` | | |/ / | | | '_ \   _____   / __| | | | |
+ | | | | | | | (_| | |   <  | | | | | | |_____| | (__  | | | |
+ |_| |_| |_|  \__,_| |_|\_\ |_| |_| |_|          \___| |_| |_|
+                                                              
+[21:15:58] [info] Welcome back ;)
+[21:15:58] [info] Configuring typescript...
+[21:15:58] [info] Installing commitizen
+[21:16:01] [info] Configuring commitizen init
+[21:16:03] [info] Adding commit script to be used over git commit
 
 ```
