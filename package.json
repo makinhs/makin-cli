@@ -1,10 +1,10 @@
 {
   "name": "makin-cli",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "CLI to scaffold quality control such as prettier pre commit",
-  "main": "./lib/index.js",
+  "main": "./dist/index.js",
   "bin": {
-    "makin-cli": "./lib/index.js"
+    "makin-cli": "./dist/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\"",
