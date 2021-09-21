@@ -1,6 +1,6 @@
 {
   "name": "makin-cli",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "CLI to scaffold quality control such as prettier pre commit",
   "main": "./lib/index.js",
   "bin": {
@@ -34,9 +34,9 @@
     "@types/chalk": "^2.2.0",
     "@types/clear": "^0.1.2",
     "@types/figlet": "^1.5.4",
-    "@types/node": "^16.9.4",
-    "@typescript-eslint/eslint-plugin": "^4.31.1",
-    "@typescript-eslint/parser": "^4.31.1",
+    "@types/node": "^16.9.6",
+    "@typescript-eslint/eslint-plugin": "^4.31.2",
+    "@typescript-eslint/parser": "^4.31.2",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.32.0",

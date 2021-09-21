@@ -15,4 +15,4 @@ export const tsconfig = `{
     "incremental": true
   }
 }
-`
+`;

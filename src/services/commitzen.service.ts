@@ -3,14 +3,12 @@ import * as npmAddScript from 'npm-add-script';
 import * as child_process from 'child_process';
 
 const exec = util.promisify(child_process.exec);
-class CommitzenService{
-  getLintDescription(){
+class CommitzenService {
+  getDescription() {
     return 'add commitzen and default configuration to support standard commit messages using npm run commit';
   }
 
-  async config(){
-    console.info('Configuring typescript...');
-
+  async config() {
     try {
       console.info('Installing commitizen');
       await exec('npm i --save-dev commitizen');

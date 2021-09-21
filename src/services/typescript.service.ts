@@ -5,11 +5,11 @@ import * as npmAddScript from 'npm-add-script';
 import * as child_process from 'child_process';
 
 const exec = util.promisify(child_process.exec);
-class TypescriptService{
-  getLintDescription(){
+class TypescriptService {
+  getDescription() {
     return 'add Typescript related packages to package.json, and a generic configuration file (.tsconfig.json), using src/index.ts as the main entrance of your app. Change it in package.json after the build if yours is different';
   }
-  async config(){
+  async config() {
     console.info('Configuring typescript...');
 
     try {
@@ -26,4 +26,4 @@ class TypescriptService{
   }
 }
 
-export default new TypescriptService()
+export default new TypescriptService();
