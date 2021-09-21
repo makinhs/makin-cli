@@ -1,6 +1,6 @@
 {
   "name": "makin-cli",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "CLI to scaffold quality control such as prettier pre commit",
   "main": "./lib/index.js",
   "bin": {
