@@ -6,6 +6,7 @@ import { Command } from 'commander';
 import * as figlet from 'figlet';
 import prettierLintService from './services/prettier-lint.service';
 import typescriptService from './services/typescript.service';
+import commitizenService from './services/commitzen.service';
 const program = new Command();
 
 (async () => {
@@ -17,6 +18,7 @@ const program = new Command();
     .option('-p, --prettier', prettierLintService.getPrettierDescription())
     .option('-l, --lint', prettierLintService.getLintDescription())
     .option('-ts, --typescript', typescriptService.getLintDescription())
+    .option('-cz, --commitizen', commitizenService.getLintDescription())
     .parse(process.argv);
 
   if (!process.argv.slice(2).length) {
@@ -27,5 +29,6 @@ const program = new Command();
     if (options.prettier) await prettierLintService.configPrettier();
     if (options.lint) await prettierLintService.configLint();
     if (options.typescript) await typescriptService.config();
+    if (options.commitizen) await commitizenService.config();
   }
 })();
