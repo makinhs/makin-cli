@@ -23,6 +23,8 @@ A CLI that scaffolds some quality gates in your app
 Options:
 
   -V, --version      output the version number
+
+  -a, --all          Install all features this CLI provides in once. Use by your own risk
   
   -p, --prettier     add prettier to package.json, with a format script and a generic configuration
                      file (.prettierrc)
@@ -36,6 +38,8 @@ Options:
                      
   -cz, --commitizen  add commitzen and default configuration to support standard commit messages
                      using npm run commit
+                     
+  -j, --jest         add jest to package.json, with a test script that runs jest
                      
   -h, --help         display help for command
 
@@ -131,5 +135,26 @@ generated tsconfig.json and the added information on package.json
 [21:15:58] [info] Installing commitizen
 [21:16:01] [info] Configuring commitizen init
 [21:16:03] [info] Adding commit script to be used over git commit
+
+```
+### Adding jest
+
+[Jest](https://jestjs.io/docs/getting-started) Basic scaffold with minimum Typescript configuration to run in your Node project
+
+
+```
+➜  makin-cli -t
+[21:13:54] [info]                       _      _                          _   _ 
+  _ __ ___     __ _  | | __ (_)  _ __             ___  | | (_)
+ | '_ ` _ \   / _` | | |/ / | | | '_ \   _____   / __| | | | |
+ | | | | | | | (_| | |   <  | | | | | | |_____| | (__  | | | |
+ |_| |_| |_|  \__,_| |_|\_\ |_| |_| |_|          \___| |_| |_|
+                                                              
+[21:13:54] [info] Welcome back ;)
+[21:13:54] [info] Configuring jest...
+[21:13:54] [info] Installing jest and required Typescript dependencies 
+[21:13:56] [info] Configuring jest.config.ts
+[21:13:56] [info] Adding jest script to package.json
+
 
 ```

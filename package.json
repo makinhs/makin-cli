@@ -1,13 +1,12 @@
 {
   "name": "makin-cli",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "CLI to scaffold quality control such as prettier pre commit",
   "main": "./dist/index.js",
   "bin": {
     "makin-cli": "./dist/index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\"",
     "start": "ts-node src/index.ts",
     "create": "npm run build",
     "build": "tsc -p .",
@@ -15,7 +14,8 @@
     "refresh": "rm -rf ./node_modules ./package-lock.json && npm install",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
-    "commit": "cz"
+    "commit": "cz",
+    "test": "jest"
   },
   "author": "Marcos Silva",
   "license": "MIT",
@@ -34,14 +34,17 @@
     "@types/chalk": "^2.2.0",
     "@types/clear": "^0.1.2",
     "@types/figlet": "^1.5.4",
+    "@types/jest": "^27.0.2",
     "@types/node": "^16.9.6",
     "@typescript-eslint/eslint-plugin": "^4.31.2",
     "@typescript-eslint/parser": "^4.31.2",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.32.0",
+    "jest": "^27.2.2",
     "nodemon": "^2.0.12",
     "prettier": "^2.4.1",
+    "ts-jest": "^27.0.5",
     "ts-node": "^10.2.1",
     "typescript": "^4.4.3"
   },
@@ -50,6 +53,8 @@
     "prettier",
     "eslint",
     "lint",
+    "jest",
+    "commitizen",
     "cli"
   ],
   "config": {
