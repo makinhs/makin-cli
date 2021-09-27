@@ -20,5 +20,8 @@ exports.default = {
         'ts',
     ],
     'testTimeout': 30000,
+    "coveragePathIgnorePatterns": [
+        "src/index.ts",
+    ],
 };
 //# sourceMappingURL=jest.config.js.map

@@ -23,4 +23,7 @@ export default {
     'ts',
   ],
   'testTimeout': 30000,
+  "coveragePathIgnorePatterns": [
+    "src/index.ts",
+  ],
 };

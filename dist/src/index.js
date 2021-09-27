@@ -16,7 +16,7 @@ const program = new commander_1.Command();
 (async () => {
     console.info(chalk.green(figlet.textSync('makin-cli', { horizontalLayout: 'full' })));
     program
-        .version('0.0.19')
+        .version('0.0.22')
         .description('A CLI that scaffolds some quality gates in your app')
         .option('-a, --all', all_service_1.default.getDescription())
         .option('-p, --prettier', prettier_service_1.default.getDescription())

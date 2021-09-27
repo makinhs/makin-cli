@@ -12,5 +12,6 @@ declare const _default: {
     testEnvironment: string;
     moduleFileExtensions: string[];
     testTimeout: number;
+    coveragePathIgnorePatterns: string[];
 };
 export default _default;
