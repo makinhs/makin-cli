@@ -2,6 +2,7 @@ import prettierService from './prettier.service';
 import lintService from './lint.service';
 import typescriptService from './typescript.service';
 import commitizenService from './commitzen.service';
+import jestService from './jest.service';
 
 class AllService {
   getDescription() {
@@ -13,6 +14,7 @@ class AllService {
     await prettierService.config();
     await lintService.config();
     await commitizenService.config();
+    await jestService.config();
   }
 }
 
