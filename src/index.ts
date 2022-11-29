@@ -8,6 +8,7 @@ import * as figlet from 'figlet';
 import allService from './services/all.service';
 import jestService from './services/jest.service';
 import prettierService from './services/prettier.service';
+import nestMongooseService from './services/nest.mongoose.service';
 import chanceService from './services/chance.service';
 import lintService from './services/lint.service';
 import typescriptService from './services/typescript.service';
@@ -24,6 +25,7 @@ const program = new Command();
     .option('-a, --all', allService.getDescription())
     .option('-p, --prettier', prettierService.getDescription())
     .option('-c, --chance', chanceService.getDescription())
+    .option('-nest-m, --nestMongoose', nestMongooseService.getDescription())
     .option('-l, --lint', lintService.getDescription())
     .option('-ts, --typescript', typescriptService.getDescription())
     .option('-cz, --commitizen', commitizenService.getDescription())
@@ -41,6 +43,7 @@ const program = new Command();
       if (options.prettier) await prettierService.config();
       if (options.lint) await lintService.config();
       if (options.chance) await chanceService.config();
+      if (options.nestMongoose) await nestMongooseService.config();
       if (options.typescript) await typescriptService.config();
       if (options.commitizen) await commitizenService.config();
       if (options.jest) await jestService.config();
