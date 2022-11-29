@@ -1,0 +1,1 @@
+export declare const prettier = "{\n  \"singleQuote\": true,\n  \"trailingComma\": \"all\",\n  \"printWidth\": 120,\n  \"overrides\": [\n  {\n    \"files\": \".prettierrc\",\n    \"options\": {\"parser\": \"json\"}\n  }\n  ]\n}";
