@@ -1,4 +1,7 @@
-export const jestConfig = `/*
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.jestConfig = void 0;
+exports.jestConfig = `/*
  * For a detailed explanation regarding each configuration property and type check, visit:
  * https://jestjs.io/docs/configuration
  */
@@ -28,3 +31,4 @@ export default {
   ],
 };
 `;
+//# sourceMappingURL=jest.config.js.map

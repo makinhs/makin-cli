@@ -1,29 +1,22 @@
-import { prettier } from './scripts/prettierrc.script';
 import * as util from 'util';
-import { writeFileSync } from 'fs';
-import * as npmAddScript from 'npm-add-script';
 import * as child_process from 'child_process';
 
 const exec = util.promisify(child_process.exec);
 
-class PrettierService {
+class ChanceService {
   getDescription() {
-    return 'add prettier to package.json, with a format script and a generic configuration file (.prettierrc)';
+    return 'add Chance to package.json';
   }
 
   async config() {
-    console.info('Configuring prettier...');
+    console.info('Configuring chance...');
     try {
-      console.info('Installing prettier');
-      await exec('npm i --save-dev prettier');
-      console.info('Adding .prettierrc');
-      await writeFileSync('.prettierrc', prettier);
-      console.info('Adding format script to package.json');
-      npmAddScript({ key: 'format', value: 'prettier --write "src/**/*.ts"', force: true });
+      console.info('Installing chance');
+      await exec('npm i --save-dev chance');
     } catch (err) {
       console.error(err);
     }
   }
 }
 
-export default new PrettierService();
+export default new ChanceService();
