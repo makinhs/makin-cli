@@ -16,7 +16,7 @@ import commitizenService from './services/commitzen.service';
 const program = new Command();
 
 (async () => {
-  console.info(chalk.green('makin-cli-v2'));
+  console.info(chalk.green('makin-cli'));
   program
     .version('0.0.22')
     .description('A CLI that scaffolds some quality gates in your app')
