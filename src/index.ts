@@ -4,7 +4,6 @@ import * as Logger from 'better-logging';
 Logger.betterLogging(console);
 import * as chalk from 'chalk';
 import { Command } from 'commander';
-import * as figlet from 'figlet';
 import allService from './services/all.service';
 import jestService from './services/jest.service';
 import prettierService from './services/prettier.service';
@@ -17,8 +16,7 @@ import commitizenService from './services/commitzen.service';
 const program = new Command();
 
 (async () => {
-  console.info(chalk.green(figlet.textSync('makin-cli', { horizontalLayout: 'full' })));
-
+  console.info(chalk.green('makin-cli-v2'));
   program
     .version('0.0.22')
     .description('A CLI that scaffolds some quality gates in your app')
